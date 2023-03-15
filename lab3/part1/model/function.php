@@ -11,16 +11,14 @@ private $_count;
         if(file_exists(_counter_file_)){
             return intval(file_get_contents(_counter_file_));
         }
-            return 0;
+        return 0;
     }
     public function increment()
     {
-        if(!isset($_SESSION[_session_key_counter_])){
-            $this -> _count++;
-            $_SESSION[_session_key_counter_] = true;
-         return $this -> _count;
-        }
-            return false;
+        if(isset($_SESSION[_session_key_counter_])) return false;
+        $this -> _count++;
+        $_SESSION[_session_key_counter_] = true;
+        return $this -> _count;
     }
 
     public function update_counter()
