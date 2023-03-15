@@ -10,9 +10,8 @@ private $_count;
     {
         if(file_exists(_counter_file_)){
             return intval(file_get_contents(_counter_file_));
-        }else{
-            return 0;
         }
+            return 0;
     }
     public function increment()
     {
@@ -20,9 +19,8 @@ private $_count;
             $this -> _count++;
             $_SESSION[_session_key_counter_] = true;
          return $this -> _count;
-        }else{
-            return false;
         }
+            return false;
     }
 
     public function update_counter()
