@@ -1,0 +1,9 @@
+{
+
+    "require": {
+        "endroid/qr-code": "*"
+    }, "autoload": {
+        "classmap": ["model"],
+        "files": ["config.php", "function.php"]
+    }
+} 
